@@ -11,8 +11,10 @@ const setupInput = function(conn) {
     if (data === 'a') connection.write('Move: left');
     if (data === 's') connection.write('Move: down');
     if (data === 'd') connection.write('Move: right');
-    stdin.resume();
+    if (data === 'p') connection.write('Say: OMG');
+    
   });
+  stdin.resume();
   return stdin;
 };
 
